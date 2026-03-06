@@ -1,5 +1,7 @@
 # GlobeVsFlat
 
+https://gevsfe.pages.dev/
+
 Interactive scientific web application for comparing spherical Earth and flat Earth models using real mathematical calculations, flight paths, and map projections.
 
 This project provides a side-by-side comparison between:
