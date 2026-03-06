@@ -54,7 +54,7 @@ export default function DistancePanel() {
   ];
 
   return (
-    <div className="space-y-2" data-testid="distance-panel">
+  <div id="results" className="space-y-2" data-testid="distance-panel">
       {cards.map((card, i) => (
         <div key={i} className={`rounded-lg border p-3 ${card.color}`}>
           <div className="flex items-center justify-between gap-2">
