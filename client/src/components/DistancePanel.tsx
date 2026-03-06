@@ -10,16 +10,36 @@ export default function DistancePanel() {
   const { point1, point2, distanceResult, setDistanceResult } = useAppContext();
 
   useEffect(() => {
-    if (point1 && point2) {
-      const globe = haversineDistance(point1.lat, point1.lon, point2.lat, point2.lon);
-      const flat = flatDistance(point1.lat, point1.lon, point2.lat, point2.lon);
-      const diff = Math.abs(globe - flat);
-      const pct = globe > 0 ? (diff / globe) * 100 : 0;
-      setDistanceResult({ globeDistance: globe, flatDistance: flat, difference: diff, percentage: pct });
-    } else {
-      setDistanceResult(null);
-    }
-  }, [point1, point2, setDistanceResult]);
+  if (point1 && point2) {
+    const globe = haversineDistance(point1.lat, point1.lon, point2.lat, point2.lon);
+    const flat = flatDistance(point1.lat, point1.lon, point2.lat, point2.lon);
+    const diff = Math.abs(globe - flat);
+    const pct = globe > 0 ? (diff / globe) * 100 : 0;
+
+    setDistanceResult({
+      globeDistance: globe,
+      flatDistance: flat,
+      difference: diff,
+      percentage: pct
+    });
+
+    // النزول التلقائي للنتائج
+    setTimeout(() => {
+      const results = document.getElementById("results");
+      const container = document.getElementById("sidebar-scroll");
+
+      if (results && container) {
+        container.scrollTo({
+          top: results.offsetTop - 20,
+          behavior: "smooth"
+        });
+      }
+    }, 150);
+
+  } else {
+    setDistanceResult(null);
+  }
+}, [point1, point2, setDistanceResult]);
 
   if (!distanceResult) {
     return (
