@@ -86,21 +86,28 @@ Rio de Janeiro → Sydney
 
 ---
 
-# Run the Project Locally
+## Run the Project Locally
 
 Install dependencies:
 
-```bash
 npm install
+
 Start development server:
 
 npm run dev
-Environment Variables
 
-Create a .env file:
+---
+
+## Environment Variables
+
+Create a `.env` file:
 
 VITE_CESIUM_TOKEN=your_cesium_token
-Project Structure
+
+---
+
+## Project Structure
+
 client/
 server/
 shared/
@@ -108,15 +115,24 @@ script/
 
 Main frontend components:
 
-GlobeView.tsx
-FlatMapView.tsx
-MercatorView.tsx
-ControlPanel.tsx
-FlightsPanel.tsx
-QiblaPanel.tsx
-ComparisonTable.tsx
+GlobeView.tsx  
+FlatMapView.tsx  
+MercatorView.tsx  
+ControlPanel.tsx  
+FlightsPanel.tsx  
+QiblaPanel.tsx  
+ComparisonTable.tsx  
 
 ---
 
-# Author Mustafa Hasan
-License MIT License
+## Author
+
+Mustafa Hasan
+https://www.facebook.com/MS98IQ
+https://github.com/Mustafaiq1998x
+
+---
+
+## License
+
+MIT License
