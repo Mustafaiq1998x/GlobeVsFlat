@@ -101,7 +101,7 @@ function AppContent() {
         </div>
       </header>
 
-      <div className="flex flex-row flex-1 overflow-auto">
+      <div id="main-scroll" className="flex flex-row flex-1 overflow-auto">
         <div className="w-40 md:w-69 md:order-first shrink-0 border-b md:border-b-0 md:border-e border-border bg-card overflow-y-auto">
           <button
             onClick={() => setSidebarOpen(v => !v)}
