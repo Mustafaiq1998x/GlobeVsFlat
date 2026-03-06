@@ -79,12 +79,17 @@ const handleApply = () => {
   if (!isNaN(p2Lat) && !isNaN(p2Lon)) setPoint2({ lat: p2Lat, lon: p2Lon });
 
   // النزول التلقائي للنتائج
-  setTimeout(() => {
-    const results = document.getElementById("results");
-    if (results) {
-      results.scrollIntoView({ behavior: "smooth" });
-    }
-  }, 200);
+setTimeout(() => {
+const results = document.getElementById("results");
+const container = document.getElementById("main-scroll");
+
+  if (results && container) {
+    container.scrollTo({
+      top: results.offsetTop,
+      behavior: "smooth"
+    });
+  }
+}, 200);
 };
 
   const handleReset = () => {
