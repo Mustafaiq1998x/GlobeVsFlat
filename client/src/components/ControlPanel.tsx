@@ -81,7 +81,7 @@ const handleApply = () => {
   // النزول التلقائي للنتائج
 setTimeout(() => {
 const results = document.getElementById("results");
-const container = document.getElementById("main-scroll");
+const container = document.getElementById("sidebar-scroll");
 
   if (results && container) {
     container.scrollTo({
