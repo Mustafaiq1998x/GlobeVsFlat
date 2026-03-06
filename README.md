@@ -115,10 +115,8 @@ ControlPanel.tsx
 FlightsPanel.tsx
 QiblaPanel.tsx
 ComparisonTable.tsx
-Author
 
-Mustafa Hasan
+---
 
-License
-
-MIT License
+# Author Mustafa Hasan
+License MIT License
